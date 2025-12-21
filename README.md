@@ -1,9 +1,13 @@
 # Collections Exercises 
 
 ## Description
-IIn this task we will explore the fundamental concepts of Java collections, 
+In this task we will explore the fundamental concepts of Java collections, 
 with special attention to the most common classes from the java.util library, 
 such as ArrayList, HashSet, HashMap, and ListIterator.
+The goal is to strengthen your understanding of how to create, modify, and 
+traverse these data structures, as well as to observe their behavior in situations 
+like duplicate management, object comparison, and element order manipulation. 
+You will also practice file reading and writing, along with user interaction.
   
 ## Exercise Statement
 Level 1: In this exercise, you will use two of Java’s most common collections: 
@@ -26,10 +30,11 @@ last name, and ID number). The goal is to understand how to structure a modular
 application that allows reading, displaying, and sorting data in a flexible way.
 
 ## Features
-The goal is to strengthen your understanding of how to create, modify, and 
-traverse these data structures, as well as to observe their behavior in situations 
-like duplicate management, object comparison, and element order manipulation. 
-You will also practice file reading and writing, along with user interaction.
+- Create and modify collections using ArrayList, HashSet, HashMap, ListIterator
+- Handle duplicates and compare objects
+- Practice object sorting (Comparable, Comparator)
+- Practice file reading and writing
+- Implement menus and user interaction.
 
 ## Technologies
 - Language: Java
