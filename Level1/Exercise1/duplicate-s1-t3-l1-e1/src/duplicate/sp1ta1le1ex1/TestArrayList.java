@@ -7,56 +7,52 @@ import java.util.List;
 public class TestArrayList {
 
     public static void testMonthArrayList() {
-        String [] monthNames = {
-                "Gener", "Febrer", "Març", "Abril", "Maig", "Juny",
-                "Juliol", "Setembre", "Octubre", "Novembre", "Desembre"
+        String[] monthNames = {
+                "January", "February", "March", "April", "May", "June",
+                "July", "September", "October", "November", "December"
         };
 
-        List months = new ArrayList();
+        List<Month> months = new ArrayList<>();
 
         for (String monthName : monthNames) {
-            months.add(monthName);
+            months.add(new Month(monthName));
         }
 
-        System.out.println("1. ArrayList Inicial (sense 'Agost'):");
-
-        for (Object month : months) {
+        System.out.println("1. Initial ArrayList (without 'August'):");
+        for (Month month : months) {
             System.out.print(month + " ");
         }
 
-        System.out.println("\n\n2. ArrayList Final (amb 'Agost' a posició de l'any):");
+        System.out.println("\n\n2. Final ArrayList (with 'August' in correct position):");
+        months.add(7, new Month("August"));
 
-        months.add(7,"Agost");
-
-
-        for (Object month : months) {
+        for (Month month : months) {
             System.out.print(month + " ");
         }
-        System.out.println("\nAmb ArrayList 'Agost' apareix en posició correcta i elements estan ordenats.");
+        System.out.println("\nWith ArrayList 'August' appears in correct position and elements are ordered.");
     }
 
     public static void iteratorArrayList() {
-        String [] monthNames = {
-                "Gener", "Febrer", "Març", "Abril", "Maig", "Juny",
-                "Juliol", "Setembre", "Octubre", "Novembre", "Desembre"
+        String[] monthNames = {
+                "January", "February", "March", "April", "May", "June",
+                "July", "September", "October", "November", "December"
         };
 
-        List months = new ArrayList();
+        List<Month> months = new ArrayList<>();
 
         for (String monthName : monthNames) {
-            months.add(monthName);
+            months.add(new Month(monthName));
         }
 
-        months.add(7, "Agost");
+        months.add(7, new Month("August"));
 
-        System.out.println("\n4. Recorrent l'ArrayList amb Iterator:");
-        Iterator it = months.iterator();
+        System.out.println("\n4. Traversing ArrayList with Iterator:");
+        Iterator<Month> it = months.iterator();
 
         while (it.hasNext()) {
-            Object month = it.next();
+            Month month = it.next();
             System.out.print(month + " ");
         }
-
+        System.out.println();
     }
 }
-
